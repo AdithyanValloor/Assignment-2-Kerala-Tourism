@@ -3,126 +3,468 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kerala Tourism</title>
+    <title>Kerala Tourism</title> 
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="./Images/Kerala_God's_Own_Country_Logo.svg.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" /><link rel="icon" type="image/x-icon" href="./Images/Kerala_God'">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
-    <main>
-        <header>
-            <div>
-                <img src="./Images/Kerala_Tourism_8MBbARQ.jpg" alt="" height="130px">
+    <header id="header" class="header">
+        <nav>
+            <div class="leftNav">
+                <img src="./Images/kerala-tourism-title.png" alt="">
             </div>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#districts">Districts</a></li>
-                    <li><button>Login</button></li>
-                    <li><button>Sign Up</button></li>
+            <div class="rightNav">
+                <ul class="linksA">
+                   <li><a href="#" class="navIcons"><img src="./Images/NavLinks icon/youtube.png" alt=""></a></li>
+                   <li><a href="#" class="navIcons"><img src="./Images/NavLinks icon/facebook.png" alt=""></a></li>
+                   <li><a href="#" class="navIcons"><img src="./Images/NavLinks icon/twitter.png" alt=""></a></li>
+                   <li><a href="#" class="navIcons"><img src="./Images/NavLinks icon/instagram.png" alt=""></a></li>
+                   <li><a href="#" class="navIcons"><img src="./Images/NavLinks icon/whatsapp.png" alt=""></a></li>
+                   <li><a href="#" class="navIcons"><img src="./Images/NavLinks icon/social.png" alt=""></a></li>
+                   <li><a href="#" class="navIcons"><img src="./Images/NavLinks icon/linkedin.png" alt=""></a></li>
                 </ul>
+                <ul class="linksB">
+                    <li><a href="#ExperienceKerala" class="navLinks">EXPERIENCE KERALA</a></li>
+                    <li><a href="#top-destination" class="navLinks">WHERE TO GO</a></li>
+                    <li><a href="#" class="navLinks">WHERE TO STAY</a></li>
+                    <li><a href="#activities" class="navLinks">THINGS TO DO</a></li>
+                    <li><a href="#packages" class="navLinks">PLAN YOUR TRIP</a></li>
+                    <li><a href="#" class="navLinks">TRAVEL CARE</a></li>
+                    <li><a href="#" class="navLinks">E NEWSLETTER</a></li>
+                    <li><a href="#" class="searchIcon"><i class="fas fa-search"></i></a></li>
+                </ul>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <div class="hamMenu">
+            <div><a href="#ExperienceKerala" class="hamLink">EXPERIENCE KERALA</a></div>
+            <div><a href="#" class="hamLink">WHERE TO GO</a></div>
+            <div><a href="#" class="hamLink">WHERE TO STAY</a></div>
+            <div><a href="#" class="hamLink">THINGS TO DO</a></div>
+            <div><a href="#" class="hamLink">PLAN YOUR TRIP</a></div>
+            <div><a href="#" class="hamLink">TRAVEL CARE</a></div>
+            <div><a href="#" class="hamLink">E NEWSLETTER</a></div>
+            <div><a href="#" class="searchIcon2"><i class="fas fa-search"></i></a></div>     
+    </div>
+    <div>
+        <div class="searchBox" >
+            <input placeholder="What are you looking for?" type="text">
+            <label for=""><button type="submit"><i class="fas fa-search"></i></button></label>     
+        </div>
+    </div>   
 
-            </nav>
-        </header>
-        <section>
-            <h1>Come and Enjoy Our Culture</h1>
-            <a href="#contact">Learn more</a>
-            <a href="#contact">Contact Us </a>
-        </section>
-    </main>
-    <hr>
-    <section>
-        <h1>Top Destinations</h1>
-        <article>
-            <img src="./Images/istockphoto-505490132-612x612.jpg" alt="" width="600px">
-            <p>Munnar</p>
-        </article>
-        <br>
-        <article>
-            <img src="./Images/640px-The_Beautiful_landscape_view_from_the_Kolukkumalai_Peak,_Munnar.jpg" alt="" width="600px">
-            <p>Kolukkumalai</p>
-        </article>
-        <br>
-        <article>
-            <img src="./Images/Bekal_Fort_1827.jpg" alt="" width="600px">
-            <p>Bekal Fort</p>
-        </article>
-        <br>
-        <article>
-            <img src="./Images/istockphoto-481420457-612x612.jpg" alt="" width="600px">
-            <p>Kumarakom</p>
-        </article>
-    </section>
-    <br>
-    <hr>
-     <section>
-        <h1>About Kerala</h1>
-        <img src="./Images/Kerala-map-en.png" alt="" height="650px">
-        <p>Kerala, southwestern coastal state of India. It is a small state, constituting only about 1 percent of the total area of the country. Kerala stretches for about 360 miles (580 km) along the Malabar Coast, varying in width from roughly 20 to 75 miles (30 to 120 km). It is bordered by the states of Karnataka (formerly Mysore) to the north and Tamil Nadu to the east and by the Arabian Sea to the south and west; it also surrounds Mahe, a segment of the state of Puducherry, on the northwestern coast. The capital is Thiruvananthapuram (Trivandrum).
+    <!-- carousel -------------------------------------------------- -->
 
-            Although isolated from the Indian interior by the mountainous belt of the Western Ghats, Kerala has been exposed to many foreign influences via its long coastline; consequently, the state has developed a unique culture within the subcontinent, not only with a diverse religious tradition but also with its own language, Malayalam. Also notable is the high social status that continues to be accorded to women of Kerala, owing to the former strength of a matrilineal kinship system. Area 15,005 square miles (38,863 square km). Pop. (2011) 33,387,677.</p>
-     </section>
-     <section id="districts">
-        <h1>Our Districts</h1>
-        <ol>
-            <li><a href="">Alappuzha</a></li>
-            <li><a href="">Ernakulam</a></li>
-            <li><a href="">Idukki</a></li>
-            <li><a href="">Kannur</a></li>
-            <li><a href="">Kasargod</a></li>
-            <li><a href="">Kollam</a></li>
-            <li><a href="">Kottayam</a></li>
-            <li><a href="">Kozhikode</a></li>
-            <li><a href="">Malappuram</a></li>
-            <li><a href="">Palakkad</a></li>
-            <li><a href="">Pathanamthita</a></li>
-            <li><a href="">Thiruvananthapuram</a></li>
-            <li><a href="">Thrissur</a></li>
-            <li><a href="">Wayanad</a></li>
-        </ol>
-     </section>
-     <fieldset id="contact">
-        <legend><h3>Contact Us</h3></legend>
-         <form action="#">
-            <label for="name">Name:</label>
-            <input type="text" name="name" id="name" required>
-            <br>
-            <br>
-            <label for="Email">Email:</label>
-            <input type="email" name="Email" id="Email" required>
-            <br>
-            <br>
-            <label for="Phone-number">Phone Number:</label>
-            <input type="tel" name="Phone-number" id="Phone-number" pattern="[6789][0-9]{9}" required title="Please enter valid mobile number">
-            <br>
-            <br>
-            
-            <select name="location" id="dis" required="Please select your district">
-                <option value="">Select District</option>
-                <option value="Alappuzha">Alappuzha</option>
-                <option value="Ernakulam">Ernakulam</option>
-                <option value="Idukki">Idukki</option>
-                <option value="Kannur">Kannur</option>
-                <option value="Kasargod">Kasargod</option>
-                <option value="Kollam">Kollam</option>
-                <option value="Kottayam">Kottayam</option>
-                <option value="Kozhikode">Kozhikode</option>
-                <option value="Malappuram">Malappuram</option>
-                <option value="Palakkad">Palakkad</option>
-                <option value="Pathanamthita">Pathanamthita</option>
-                <option value="Thiruvananthapuram">Thiruvananthapuram</option>
-                <option value="Thrissur">Thrissur</option>
-                <option value="Wayanad">Wayanad</option>
-            </select>
-            <br>
-            <br>
-            <button type="submit">Submit</button>
-         </form>
-     </fieldset>
-     <br>
-     <footer>
-        <p>
-            All rights reserved © Kerala Tourism 2024
-        </p>
-     </footer>
+    <!-- -----------------lg -->
+    <div class="container-fuild carousel-container" id="carousel-display-lg">
+        <div id="carouselExampleFade" class="carousel slide carousel-fade ">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="img-fluid" src="https://www.keralatourism.org/images/banner/desktop/escape-to-the-hills-1920x650_(2).jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+              <img class="img-fluid" src="https://www.keralatourism.org/images/banner/desktop/tvm1-1920x650_(1).jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img class="img-fluid" src="https://www.keralatourism.org/images/banner/desktop/caravan-1920x6502.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img class="img-fluid" src="https://www.keralatourism.org/images/banner/desktop/ashtamudi_lake.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img class="img-fluid" src="https://www.keralatourism.org/images/banner/desktop/destination-wedding-banner-1920.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img class="img-fluid" src="https://www.keralatourism.org/images/banner/desktop/banner_malarickal_1920.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </div>
+
+    <!-- md --------------------- -->
+
+    <div class="container-fuild carousel-container" id="carousel-display-md">
+        <div id="carouselExampleFade-1" class="carousel slide carousel-fade ">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="img-fluid" src="https://www.keralatourism.org/images/banner/tablet/escape-to-the-hills-1024x768_(1).jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+              <img class="img-fluid" src="https://www.keralatourism.org/images/banner/tablet/tvm1-1024x768_(1).jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img class="img-fluid" src="https://www.keralatourism.org/images/banner/tablet/caravan-1024x7682.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img class="img-fluid" src="https://www.keralatourism.org/images/banner/tablet/ashtamudi_lake_-1024-768.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img class="img-fluid" src="https://www.keralatourism.org/images/banner/tablet/destination-wedding-banner-1024.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img class="img-fluid" src="https://www.keralatourism.org/images/banner/tablet/tab-1024.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade-1" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade-1" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </div>
+
+    <!-- ---------------------sm----------------- -->
+
+    <div class="container-fuild carousel-container" id="carousel-display-sm">
+        <div id="carouselExampleFade-2" class="carousel slide carousel-fade ">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="img-fluid" src="https://www.keralatourism.org/images/banner/mobile/escape2-to-the-hills-768x768_(1).jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+              <img class="img-fluid" src="https://www.keralatourism.org/images/banner/mobile/tvm1-768x768_(1).jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img class="img-fluid" src="https://www.keralatourism.org/images/banner/mobile/caravan-768x7682.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img class="img-fluid" src="https://www.keralatourism.org/images/banner/mobile/ashtamudi_lake_-768-768.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img class="img-fluid" src="https://www.keralatourism.org/images/banner/mobile/destination-wedding-banner-768.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img class="img-fluid" src="https://www.keralatourism.org/images/banner/mobile/mobile-banner-768.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade-2" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade-2" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </div>
+
+    <div class="container-fluid ad-container d-flex flex-column align-items-center">
+        <img id="ad-img1" class="img-fluid" style="max-width: 90%;" src="https://www.keralatourism.org/images/ktm-banner-may-desktop.jpg?d=030120231239" alt="">
+        <img id="ad-img2" class="img-fluid" style="max-width: 95%;" src="https://www.keralatourism.org/images/ktm-banner-may-mob.jpg?d=030120231239" alt="">
+    </div>
+
+   <!-------------- EXPERIENCE KERALA -->\
+
+    <div class="container text-center">
+        <h1 id="ExperienceKerala" class="m-5 title">Experience Kerala</h1>
+        <div class="img-gallery d-flex align-items-center justify-content-center">
+          <div class="img-gallery-container img-show">
+            <img src="https://www.keralatourism.org/images/homecontentimage/desktop/RT-2.jpg" alt="...">
+            <div class="img-gallery-text"><h2>RESPONSIBLE TOURISM MISSION</h2></div>
+            <div class="overlay">
+              <p>RT Mission is the nodal agency formed by the Government of Kerala to spread and implement the idealogies and initiatives of Responsible Tourism all over the state.</p>
+            </div>
+          </div>
+          <div class="img-gallery-container">
+            <img src="https://www.keralatourism.org/images/homecontentimage/desktop/yoga5.jpg" alt="...">
+            <div class="img-gallery-text"><h2>YOGA</h2></div>
+            <div class="overlay">
+              <p>An exclusive website to know What is Yoga and how Yoga can change your life.</p>
+            </div>
+          </div>
+          <div class="img-gallery-container">
+            <img src="https://www.keralatourism.org/images/homecontentimage/desktop/Theyyam2.jpg" alt="...">
+            <div class="img-gallery-text"><h2>KANNUR</h2></div>
+            <div class="overlay">
+              <p>Welcome to Kannur , a city that boasts of a vibrant tapestry of history , culture, tradition and natural beauty.</p>
+            </div>
+          </div>
+          <div class="img-gallery-container img-show">
+            <img src="https://www.keralatourism.org/images/homecontentimage/desktop/judaisam13.jpg" alt="...">
+            <div class="img-gallery-text"><h2>JUDAISM IN KERALA</h2></div>
+            <div class="overlay">
+              <p>Judaism is an ethnic religion comprising the collective religious, cultural and legal tradition and civilization of the Jewish people.</p>
+            </div>
+          </div>
+        </div> 
+        <button class="btn-pg">FIND MORE EXPERIENCES <i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+
+    <!-- TOP DESTINATIONS-------------- -->
+    
+    <div class="top-destination text-center">
+      <h1 id="top-destination" class="m-5 title">Top Destinations</h1>
+      <div class="container top-destination-cont row g-1"> 
+        <div class="TopDestinations-img-cont col-lg-3 col-md-6 col-6">
+          <img src="https://www.keralatourism.org/images/homecontentimage/desktop/thekkekudi_cave_temple2.jpg" alt="">
+          <div class="TopDestinations-text">
+            <h3>Thekkukudi Cave Temple</h3>
+          </div>
+        </div>
+        <div class="TopDestinations-img-cont col-lg-3 col-md-6 col-6">
+          <img src="https://www.keralatourism.org/images/homecontentimage/desktop/museum_of_kerala_history1.jpg" alt="">
+          <div class="TopDestinations-text">
+            <h3>Museum of Kerala History</h3>
+          </div>
+        </div>
+        <div class="TopDestinations-img-cont col-lg-3 col-md-6 col-6">
+          <img src="https://www.keralatourism.org/images/homecontentimage/tab/kalamandalam.jpg" alt="">
+          <div class="TopDestinations-text">
+            <h3>Kerala kalamandalam</h3>
+          </div>
+        </div>
+        <div class="TopDestinations-img-cont col-lg-3 col-md-6 col-6">
+          <img src="https://www.keralatourism.org/images/homecontentimage/tab/Kuthampully2.jpg" alt="">
+          <div class="TopDestinations-text">
+            <h3>Kuthampully Handloom Village</h3>
+          </div>
+        </div>
+        <div class="TopDestinations-img-cont col-lg-3 col-md-6 col-6">
+          <img src="https://www.keralatourism.org/images/homecontentimage/tab/kunhimangalam2.jpg" alt="">
+          <div class="TopDestinations-text">
+            <h3>Kunhimangalam</h3>
+          </div>
+        </div>
+        <div class="TopDestinations-img-cont col-lg-3 col-md-6 col-6">
+          <img src="https://www.keralatourism.org/images/homecontentimage/tab/mannar.jpg" alt="">
+          <div class="TopDestinations-text">
+            <h3>Mannar</h3>
+          </div>
+        </div>
+        <div class="TopDestinations-img-cont col-lg-3 col-md-6 col-6">
+          <img src="https://www.keralatourism.org/images/homecontentimage/tab/vyloppilli-samakrithi-bhavan2.jpg" alt="">
+          <div class="TopDestinations-text">
+            <h3>Vyloppilli samakrithi Bhavan</h3>
+          </div>
+        </div>
+        <div class="TopDestinations-img-cont col-lg-3 col-md-6 col-6">
+          <img src="https://www.keralatourism.org/images/homecontentimage/tab/MANNANAM-.jpg" alt="">
+          <div class="TopDestinations-text">
+            <h3>Mannanam</h3>
+          </div>
+        </div>  
+      </div>
+      <button class="btn-pg">EXPLORE OUR DESTINATIONS <i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+   
+<!-- ACTIVITIES -->
+
+    <div class="activities text-center">
+      <h1 id="activities" class="m-5 activity-title">Things to do in Kerala</h1>
+      <div class="container activities-cont row g-4"> 
+        <div class="activities-img-cont col-md-4 col-sm-6 col-xs-12">
+          <img src="https://www.keralatourism.org/images/homecontentimage/tab/Screw-Pine-Weaving1.jpg" alt="">
+          <div class="activities-text">
+            <p>Responsible Tourism</p>
+          </div>
+        </div>  
+        <div class="activities-img-cont col-md-4 col-sm-6 col-xs-12">
+          <img src="https://www.keralatourism.org/images/homecontentimage/tab/ayurveda6.jpg" alt="">
+          <div class="activities-text">
+            <p>Ayurveda</p>
+          </div>
+        </div>  
+        <div class="activities-img-cont col-md-4 col-sm-6 col-xs-12">
+          <img src="https://www.keralatourism.org/images/homecontentimage/tab/Paragliding.jpg" alt="">
+          <div class="activities-text">
+            <p>Paragliding</p>
+          </div>
+        </div>  
+        <div class="activities-img-cont col-md-4 col-sm-6 col-xs-12">
+          <img src="https://www.keralatourism.org/images/homecontentimage/tab/A-Journey-through-the-Forest.jpg" alt="">
+          <div class="activities-text">
+            <p>A Journey through the Forest</p>
+          </div>
+        </div>  
+        <div class="activities-img-cont col-md-4 col-sm-6 col-xs-12">
+          <img src="https://www.keralatourism.org/images/homecontentimage/tab/scuba-diving1.jpg" alt="">
+          <div class="activities-text">
+            <p>scuba diving</p>
+          </div>
+        </div>  
+        <div class="activities-img-cont col-md-4 col-sm-6 col-xs-12">
+          <img src="https://www.keralatourism.org/images/homecontentimage/tab/Hiking.jpg" alt="">
+          <div class="activities-text">
+            <p>Hiking</p>
+          </div>
+        </div>  
+         
+      </div>
+      <button class="btn-pg">FIND MORE ACTIVITIES <i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+
+<!-- --------- TOUR PACKAGES -->
+
+
+    <div class="tour text-center">
+      <h1 id="packages" class="mt-3 tour-title">Tour Packages</h1>
+      <p class="mb-5 t-title">STOP. Breathe. Slow down. Embrace life. It’s time for Kerala!
+        Plan your trip with amazing offers and packages.</p>
+      <div class="container container-fluid-md tour-cont row g-1"> 
+        <div class="tour-img-cont col-md-6 col-lg-4 col-sm-6 col-xs-12">
+          <img class="img-fluid" src="https://www.keralatourism.org/images/homecontentimage/entire-kerala.jpg" alt="">
+          <div class="tour-text">
+            <h3>Entire Kerala</h3>
+            <p>A Journey through God's Own Country</p>
+          </div>
+          <div class="price">
+            <a href="#">INR 2,000 to 118,000</a>
+          </div>
+        </div>  
+        <div class="tour-img-cont col-md-6 col-lg-4 col-sm-6 col-xs-12">
+          <img class="img-fluid" src="https://www.keralatourism.org/images/homecontentimage/central-kerala.jpg" alt="">
+          <div class="tour-text">
+            <h3>Central Kerala</h3>
+            <p>Trip to the soul of Kerala</p>
+          </div>
+          <div class="price">
+            <a href="#">INR 1,000 to 116,000</a>
+          </div>
+        </div>  
+        <div class="tour-img-cont col-md-6 col-lg-4 col-sm-6 col-xs-12">
+          <img class="img-fluid" src="https://www.keralatourism.org/images/homecontentimage/backwater.jpg" alt="">
+          <div class="tour-text">
+            <h3>backwater</h3>
+            <p>Trip to the soul of Kerala</p>
+          </div>
+          <div class="price">
+            <a href="#">INR 1,000 to 60,000</a>
+          </div>
+        </div>  
+        <div class="tour-img-cont col-md-6 col-lg-4 col-sm-6 col-xs-12">
+          <img class="img-fluid" src="https://www.keralatourism.org/images/homecontentimage/south-kerala.jpg" alt="">
+          <div class="tour-text">
+            <h3>South Kerala</h3>
+            <p>A journey to remember</p>
+          </div>
+          <div class="price">
+            <a href="#">INR 1,000 to 175,000</a>
+          </div>
+        </div>  
+        <div class="tour-img-cont col-md-6 col-lg-4 col-sm-6 col-xs-12">
+          <img class="img-fluid" src="https://www.keralatourism.org/images/homecontentimage/hill-station.jpg" alt="">
+          <div class="tour-text">
+            <h3>Hill Stations</h3>
+            <p>Explore the lush mist-clad hill stations</p>
+          </div>
+          <div class="price">
+            <a href="#">INR 2,000 to 80,000</a>
+          </div>
+        </div>  
+        <div class="tour-img-cont col-md-6 col-lg-4 col-sm-6 col-xs-12">
+          <img class="img-fluid" src="https://www.keralatourism.org/images/homecontentimage/honeymoon.jpg" alt="">
+          <div class="tour-text">
+            <h3>Honeymoon</h3>
+            <p>Celebrate your romance</p>
+          </div>
+          <div class="price">
+            <a href="#">INR 2,000 to 150,000</a>
+          </div>
+        </div>  
+              
+      </div>
+      <button class="btn-pg">FIND MORE PACKAGES <i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+
+<!------- Plan Your Trip -------->
+
+    <h1 class="m-5 title text-center">Plan Your Trip</h1>
+    <div class="container trip-plan text-center">
+      <div class="plan-icon">
+        <div class="plan-img">
+          <img src="./Images/Plan Icons/tr-icon-hotel.png" alt="">
+        </div>
+        <a href="#">Where to Stay</a>
+      </div>
+      <div class="plan-icon">
+        <div class="plan-img">
+          <img src="./Images/Plan Icons/tr-icon-brochure.png" alt="">
+        </div>
+        <a href="#">E Brochures</a>
+      </div>
+      <div class="plan-icon">
+        <div class="plan-img">
+          <img src="./Images/Plan Icons/tr-icon-visa.png" alt="">
+        </div>
+        <a href="#">Visa on Arrival</a>
+      </div>
+      <div class="plan-icon">
+        <div class="plan-img">
+          <img src="./Images/Plan Icons/tr-icon-info.png" alt="">
+        </div>
+        <a href="#">Travel Info</a>
+      </div>
+      <div class="plan-icon">
+        <div class="plan-img">
+          <img src="./Images/Plan Icons/tr-icon-messageboard.png" alt="">
+        </div>
+        <a href="#">Travel Care</a>
+      </div>
+      <div class="plan-icon">
+        <div class="plan-img">
+          <img src="./Images/Plan Icons/tr-icon-toilets.png" alt="">
+        </div>
+        <a href="#">Toilets</a>
+      </div>
+      <div class="plan-icon">
+        <div class="plan-img">
+          <img src="./Images/Plan Icons/tr-icon-newsletter.png" alt="">
+        </div>
+        <a href="#">E Newsletter</a>
+      </div>
+      <div class="plan-icon">
+        <div class="plan-img">
+          <img src="./Images/Plan Icons/yatri-logo.png" alt="">
+        </div>
+        <a href="#">Yathri Nivas</a>
+      </div>
+    </div>
+    <div class="container">
+      <div class="plan-search">
+        <p>Search for Accommodation</p>
+        <input placeholder="Enter Keyword" type="text">
+        <button><i class="fas fa-search"></i> SEARCH</button>
+      </div>
+    </div>
+
+    <footer>
+      <h1 class="m- title text-center">Connect with us</h1>
+      <div class="container">
+        <div class="connect">
+          <img src="./Images/NavLinks icon/youtube.png" alt="">
+          <img src="./Images/NavLinks icon/facebook.png" alt="">
+          <img src="./Images/NavLinks icon/twitter.png" alt="">
+          <img src="./Images/NavLinks icon/instagram.png" alt="">
+          <img src="./Images/NavLinks icon/whatsapp.png" alt="">
+          <img src="./Images/NavLinks icon/social.png" alt="">
+          <img src="./Images/NavLinks icon/linkedin.png" alt="">
+        </div>
+      </div>
+      <div class="container footer-content text-center">
+        <p>Department of Tourism, Government of Kerala, Park View, Thiruvananthapuram, Kerala, India - 695 033</p>
+        <p>Phone: +91 471 2321132, Fax: +91 471 2322279, E-mail: <span><a href="#"> info@keralatourism.org.</a></span></p>
+        <p>All rights reserved © Kerala Tourism 2024. <span><a href="%">Copyright</a></span> | <span><a href="%"> Terms of Use</a></span> |  <span><a href="%">Cookie Policy</a></span> | <span><a href="%">Contact Us.</a></span></p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

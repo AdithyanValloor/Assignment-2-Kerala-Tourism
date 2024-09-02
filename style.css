@@ -1,0 +1,727 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.header{
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(255, 255, 255,0.15);;
+    z-index: 999;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+}
+
+.rightNav{
+    display: flex;
+    flex-direction: column;
+    /* margin-right: 60px; */
+}
+
+.leftNav img{
+    width: 230px;
+    margin:10px 0px;
+    cursor: pointer;
+}
+
+.linksA{
+    display: flex;
+    list-style: none;
+}
+
+.linksB{
+    display: flex;
+    list-style: none;
+
+}
+
+.navIcons img{
+    width: 30px;
+    margin: 5px;
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.navIcons img:hover{
+    transform: scale(1.1);
+}
+
+.navLinks{
+    color: white;
+    text-decoration: underline;
+    margin: 0 10px;
+    font-size: 12px;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 2px;
+    text-decoration-color: rgba(182, 182, 182, 0);
+    transition: text-decoration-color 0.3s ease-in-out;
+}
+
+.navLinks:hover{
+    text-decoration-color: rgba(182, 182, 182, 1);
+}
+
+.hamburger{
+    display: none;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.bar{
+    display: block;
+    width: 27px;
+    height: 2px; 
+    margin: 5px 0;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamMenu--open{
+   opacity: 1 !important;
+   display: grid !important;
+}
+
+.hamburger--open .bar:nth-child(1){
+    transform: translatey(7px) rotate(45deg);
+}
+.hamburger--open .bar:nth-child(2){
+    opacity: 0;
+
+}
+.hamburger--open .bar:nth-child(3){
+    transform: translatey(-7px) rotate(-45deg);
+    z-index: 999;
+}
+
+.hamMenu{
+    display: none;
+}
+
+@media(max-width:1024px){
+
+    .leftNav img{
+        width: 190px;
+        margin-top: 30px;
+    }
+    .linksB{
+        margin-top: 35px;
+    }
+
+    .linksA{
+        display: none;
+    }
+}
+
+@media(max-width:990px){
+    nav{
+        justify-content: space-between;
+    }
+
+    .leftNav img{
+        width: 190px;
+        margin-top: 30px;
+        margin-left: 20px;
+    }
+    .linksB{
+        margin-top: 35px;
+    }
+
+    .linksA{
+        display: none;
+    }
+    
+    .linksB{
+        display: none;
+    }
+    .hamburger{
+        display: block;
+    }
+    .hamMenu{
+        width: 100%;
+        background-color: rgba(0, 57, 115, 1);
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+        position: fixed;
+        display: none;
+        top: 100px;
+        height: 200px;
+        opacity: 0;
+        z-index: 50;
+    }
+    
+    .hamMenu div{
+        border-bottom: solid white 0.2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .hamLink{
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+        font-size: 12px;
+    }
+}
+
+
+/* searchbox--------------------------------------- */
+
+
+.searchBox--open{
+    z-index: 88 !important;
+    opacity: 1 !important;
+    height: 100px !important;
+}
+
+.searchBox--open input{
+    margin-top: 20px;
+    transition: margin-top 0.15s ease-in-out;
+}
+
+.searchBox--open{
+    height: 100px;
+    transition: height 0.4s ease-in-out;
+}
+
+
+.searchBox{
+    width: 100%;
+    height: 50px;
+    background-color: aliceblue;
+    text-align: center;
+    display: block;
+    opacity: 0;
+    position: fixed;
+    margin-top: 100px;
+    z-index: -2;
+}
+
+.searchBox input{
+    width: 800px;
+    height: 50px;
+    border: none;
+    padding-left: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+
+.searchBox button{
+    background-color: rgb(3, 52, 100);
+    color: white;
+    padding: 13px;
+    border: none;
+    margin-left: -7px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    transition: opacity 0.2s;
+}
+
+.searchBox button:hover{
+    opacity: 0.9;
+}
+
+.searchBox textarea:focus, input:focus{
+    outline: none;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(0, 164, 235, 0.32) 0px 2px 16px 0px;
+}
+
+
+@media(max-width:990px){
+    .searchBox{
+        width: 100%;
+        height: 50px;
+        background-color: aliceblue;
+        text-align: center;
+        position: fixed;
+        display: block;
+        margin-top: 300px;
+        opacity: 0;
+    }
+    
+    .searchBox input{
+        width: 80vw;
+        height: 50px;
+        border: none;
+        padding-left: 10px;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    }
+    .searchBox textarea:focus, input:focus{
+        outline: none;
+        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(0, 164, 235, 0.32) 0px 2px 16px 0px;
+    }
+
+    .searchBox--open{
+        z-index: 88 !important;
+        opacity: 1 !important;
+        height: 100px !important;
+    }
+    
+    .searchBox--open input{
+        margin-top: 20px;
+        transition: margin-top 0.15s ease-in-out;
+    }
+    
+    .searchBox--open{
+        height: 100px;
+        transition: height 0.4s ease-in-out;
+    }
+}
+
+.searchIcon,.searchIcon2{
+    color: white;
+}
+
+
+/* -----------------------------carousel------------------------- */
+
+
+#carousel-display-sm,#carousel-display-md{
+    display: none;
+}
+
+#ad-img2{
+    display: none;
+}
+
+@media(max-width:1023px){
+    #carousel-display-lg{
+        display: none;
+    }
+    #carousel-display-md{
+        display: block;
+    }
+    #carousel-display-sm{
+        display: none;
+    }
+}
+
+
+@media(max-width:767px){
+    #carousel-display-lg{
+        display: none;
+    }
+    #carousel-display-md{
+        display: none;
+    }
+    #carousel-display-sm{
+        display: block;
+    }
+    #ad-img1{
+        display: none;
+    }
+    #ad-img2{
+        display: block;
+    }
+}
+
+
+.ad-container{
+    background-color: rgb(227, 227, 227);
+    padding:30px 0;
+    cursor: pointer;
+}
+
+#ad-show-2{
+    display: none;
+}
+
+.header--open{
+    background-color: rgba(0, 57, 115, 1);
+    border-bottom: solid white 1px;
+}
+
+.headerbg{
+    background-color: rgba(0, 57, 115, 1);
+    transition:  all 0.5s;
+}
+
+/* --------Experience Kerala */
+
+.img-gallery img{
+    width: 100%;
+}
+
+.img-gallery-container{
+    background-color: rgb(255, 63, 63);
+    margin: 5px;
+    padding-bottom: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+.img-gallery-text{
+    position: absolute;
+    color: white;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 3px 3px 0px rgba(0,0,0,0.69);
+
+}
+
+.img-gallery-text h2{
+    font-size: 30px;
+}
+
+.img-gallery-container:hover .overlay {
+    height: 100%;
+  }
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    opacity: 0.8;
+    transition: .5s ease;
+    padding: 0 20px;
+    background-color: rgb(21, 21, 21);
+    
+}
+
+.overlay p{
+    margin-top: 50%;
+    margin: 70% 0 20px;
+    color: white;
+}
+
+@media(max-width:1024px){
+    .img-show{
+        display: none;
+    }
+
+}  
+
+.btn-pg{
+    background-color: #036;
+    color: white;
+    font-size: 15px;
+    padding: 10px 20px;
+    border: none;
+    transition: background-color 0.25s;
+    font-weight: 100;
+    margin: 20px 0;
+}
+
+.btn-pg:hover{
+    background-color: rgb(0, 39, 78);
+}
+
+.title{
+    color: #036;
+    font-size: 30px;
+}
+
+/* ---------------- Top Destinations---------------- */
+
+.top-destination{
+    background-color: rgb(240, 240, 240);
+    padding-top: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.TopDestinations-img-cont{
+    position: relative;
+    cursor: pointer;
+}
+
+.TopDestinations-text{
+    position: absolute;
+    top: 84%;
+    color: white;
+    width: 99%;
+}
+
+.TopDestinations-img-cont img{
+    width: 100%; 
+}
+
+.TopDestinations-text h3{
+    font-size: 17px
+}
+
+@media(max-width:425px){
+    .TopDestinations-text h3{
+        font-size: 11px
+    }
+}
+
+/* -------------------- */
+
+.activities{
+    padding-top: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    background-image: url('./Images/bg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    object-fit: cover;
+}
+
+.activities-img-cont{
+    position: relative;
+}
+
+.activities-text{
+    position: absolute;
+    top: 84%;
+    color: white;
+    width: 99%;
+}
+
+.activities-img-cont img{
+    width: 100%; 
+}
+
+.activities-text p{
+    font-size: 16px
+}
+
+.activity-title{
+    color: white;
+    font-size: 20px;
+}
+
+/* --------TOUR PACKAGES--------- */
+
+
+.tour{
+    padding-top: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(240, 240, 240);
+    object-fit: cover;
+}
+
+.tour-img-cont{
+    position: relative;
+}
+
+.tour-text{
+    position: absolute;
+    top: 40%;
+    color: white;
+    width: 99%;
+}
+
+.tour-img-cont img{
+    width: 100%; 
+}
+
+.tour-img-cont{
+    transition: all 0.2s;
+}
+
+.tour-img-cont:hover{
+    opacity: 0.8;
+}
+
+.tour-text h3{
+    font-size: 16px;
+}
+
+.tour-text p{
+    font-size: 13px;
+    font-weight: 100;
+}
+
+.price{
+    position: absolute;
+    top: 80%;
+    left: 5%;
+    color: white;
+    background-color: rgb(144, 0, 0);
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.price a{
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: lighter;
+    color: white;
+}
+
+/* plan */
+
+.trip-plan{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(115px,1fr));
+    column-gap: 5px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.plan-icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 130px;
+    padding: 10px;
+    margin: 2px;
+}
+
+.plan-icon img{
+    width: 50px;
+    height: 50px;
+    margin-top: 21px;
+    margin-left: 8px;
+}
+
+.plan-img{
+    background-color: #036;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all0.2s;
+}
+
+.plan-img:hover{
+    opacity: 0.7;
+}
+
+.plan-icon a{
+    text-decoration: none;
+    color: #036;
+    margin-top: 5px;
+    font-weight: 100;
+}
+
+.plan-search{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #e3e7f1;
+    height: 100px;
+}
+
+.plan-search input{
+    width: 50%;
+    height: 40px;
+    font-weight: 100;
+    padding-left: 10px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    border: none;
+}
+
+.plan-search input:focus{
+    outline: none;
+    border: none;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(0, 164, 235, 0.32) 0px 2px 16px 0px;
+}
+
+
+.plan-search button{
+    height: 40px;
+    padding: 0 25px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    font-weight: 100;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(0, 164, 235, 0.32) 0px 2px 16px 0px;
+
+}
+
+.plan-search p{
+    margin-top: 12px;
+    font-weight: 100;
+}
+
+@media(max-width:990px){
+    .plan-search{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        background-color: #e3e7f1;
+        height: 200px;
+        margin-top: 20px;
+    }
+    .plan-search input{
+        width: 90%;
+        height: 40px;
+    }
+    .plan-search button{
+        width: 90%;
+    }
+}
+
+.connect img{
+    width: 50px;
+    margin: 5px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.connect img:hover{
+    transform: scale(1.05);
+}
+
+.connect{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-content a{
+    text-decoration: none;
+}
+
+.footer-content p{
+    font-weight: 200;
+    margin: 5px;
+}
+
+footer{
+    background-color: #f4f4f4;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+.carousel-inner img{
+    cursor: pointer;
+}
