@@ -691,7 +691,7 @@ nav{
 }
 
 .connect img{
-    width: 50px;
+    width: 30px;
     margin: 5px;
     cursor: pointer;
     transition: all 0.2s;
@@ -724,4 +724,10 @@ footer{
 
 .carousel-inner img{
     cursor: pointer;
+}
+
+@media(max-width:425px){
+    .footer-content p{
+        font-size: 12px;
+    }
 }
